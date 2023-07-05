@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body style="background-color:  #755c48">
+    
+
+
+    <!--         NAVBAR DARK            -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="database.html">DataBase</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="richiesta_operazioni.html">Operazioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="statistiche.html">Statistiche</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Contenuto scorribile con scrollbar sempre visibile -->
+
+    <div class="overflow-auto">
+        
+      
+
+      <div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
+      <h1 style="font-size: 100px; font-family:'Times New Roman', Times, serif"> OSCAR MOVIES </h1>
+      </div>
+
+      <!--         BUTTON E INPUT DARK          -->  
+
+      <form action="/" method="POST">
+
+
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <input name="inputText" style= "border-radius: 10px ;background-color: #c3b091 ;height: 50px; width: 350 px;" class="form-control form-control-lg" type="text" placeholder="Inserisci testo">
+          </div>
+
+          <div style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);">
+            <button name="submitButton" style="border-width: 3px;" type="submit" class="btn btn-outline-dark btn-lg">Cerca</button>
+          </div>
+
+      </form>
+
+      <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); width: 70%; height: 20%">
+        <div class="form-floating">
+          <textarea name="outputText" readonly id="floatingTextarea2" style= "padding: 30px; text-align: center; border-radius:50px; background-color:  #c3b091 ;width:  100%; height: 300px;" placeholder="Si prega di effettuare query per la ricerca dei film tramite 
+          anno, nome, numero di awards o numero di nomination, scrivendo ad esempio 
+          Film : The Whale
+          Year : 2016
+          Award : 11
+          Nomination : 21">{{ outputText }}</textarea>
+          <label for="floatingTextarea2"></label>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

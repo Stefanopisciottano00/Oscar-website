@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statistiche</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+  </head>
+  <body style="background-color:  #755c48">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-bfdf48a28f380ad61ddebba6f48d2960ec7a89382c81c5e4b12667b03cc3c4e3" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!--         NAVBAR DARK            -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="database.html">DataBase</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="richiesta_operazioni.html">Operazioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="statistiche.html">Statistiche</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!--        END NAVBAR DARK            -->
+
+      <div style="margin-top: 5%;" class="container text-center">
+
+        <!--       BOTTONE A SCORRIMENTO           -->
+          <div class="dropdown" style="margin-bottom: 5%;">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Grafico 3
+            </button>
+            <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item text-light" href="statistiche.html">Grafico 1</a>
+              <a class="dropdown-item text-light" href="statistiche2.html">Grafico 2</a>
+              <a class="dropdown-item text-light" href="statistiche3.html">Grafico 3</a>
+            </div>
+          </div>
+
+          <script>
+            $(document).ready(function() {
+              $('.dropdown-item').click(function() {
+                var selectedText = $(this).text();
+                $('.dropdown-toggle').text(selectedText);
+              });
+            });
+            </script>
+
+          <h1>Numero di film Anno</h1>
+          <canvas id="myChart"></canvas>
+
+          <!-- Aggiungi il codice di Chart.js -->
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+          <script>
+            // Recupera i dati passati dal template
+            var labels = {{ labels | tojson | safe }};
+            var values = {{ values | tojson | safe }};
+
+            labels = labels.filter(function(label, index) {
+              return values[index] !== undefined;
+            });
+            values = values.filter(function(value) {
+              return value !== undefined;
+            });
+
+            // Crea il grafico utilizzando Chart.js
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: labels,
+
+                datasets: [{
+                  label: 'Dati',
+                  data: values,
+                  backgroundColor: 'rgba(195, 176, 145, 1)',
+                  borderColor: 'rgba(101, 67, 33, 1)',
+                  borderWidth: 2
+                }]
+              },
+              options: {
+                responsive: true,
+                plugins: {
+                  legend: {
+                    display : false,                  
+                  },
+                },
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                    ticks: {
+                      color: 'black' // Cambia il colore dei numeri dell'asse Y in nero
+                    },
+
+                    max: 30 //VALORE MASSIMO IN ALTEZZA
+                  },
+
+                  
+
+                  x: {
+                    ticks: {
+                      color: 'black' // Cambia il colore dei numeri dell'asse Y in nero
+                    }
+                  }
+                },
+
+                barPercentage: 1
+
+              }
+            });
+          </script>
+
+      </div>
+
+  </body>
+</html>

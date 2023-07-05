@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  </head>
+  <body style="background-color:  #755c48">
+    
+
+
+    <!--         NAVBAR DARK            -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="database.html">DataBase</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="richiesta_operazioni.html">Operazioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="statistiche.html">Statistiche</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!--        END NAVBAR DARK            -->
+    
+
+
+    <div class="d-flex align-items-center text-center justify-content-center vh-100">
+    <div style="width: 50%;">
+
+    <!--        INSERIRE IL CONTENUTO QUI       -->
+    <form action="/richiesta_operazioni.html" method="post">
+        <label for="richiesta" style="margin-bottom: 10px; font-size: 29px; text-align: center;">Desideri aggiungere, eliminare oppure modificare un film ?</label>
+        <input type="text" id="input_richiesta" name="input_richiesta" class="form-control mb-3" style="border-radius: 16px; background-color:  #c3b091 ;">
+
+        <input type="submit" value="Inoltra" name="aggiungi_submit" class="btn btn-outline-dark btn-lg btn-block" style="width: 30%; border-radius: 16px; background-color:  #c3b091 ;">
+      </form>
+
+    
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

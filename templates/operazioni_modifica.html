@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        table {
+          border-collapse: collapse;
+        }
+    
+        th, td {
+          border: 4px solid #3333;
+          padding: 8px;
+        }
+      </style>
+  </head>
+  <body style="background-color:  #755c48">
+    
+
+
+    <!--         NAVBAR DARK            -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="database.html">DataBase</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="richiesta_operazioni.html">Operazioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="statistiche.html">Statistiche</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!--        END NAVBAR DARK            -->
+    
+
+
+    <div class="d-flex align-items-center text-center justify-content-center vh-100">
+    <div style="width: 100%;">
+
+    <!--        INSERIRE IL CONTENUTO QUI       -->
+    <div class="d-flex align-items-center text-center justify-content-center vh-100">
+      <div class="container">
+        <h1 style="font-size: 80px; font-family:'Times New Roman', Times, serif; margin-top: 3%; margin-bottom: 3%;">MODIFICA UN FILM</h1>
+        
+            <div class="row justify-content-center align-items-start ">
+              <div class="col-md-8 col-lg-8">
+                
+        
+            <div class="row justify-content-center align-items-start ">
+              <div class="col-md-8 col-lg-4">
+                <form action="/operazioni_modifica.html" method="post">
+                  <label for="titolo" style="margin-bottom: 30px;">Inserisci il titolo del film, il parametro da modificare e il nuovo valore</label>
+
+                  <label for="titolo" style="margin-bottom: 10px;">Titolo :</label>
+                  <input type="text" id="titolo_modifica" name="titolo_modifica" class="form-control mb-3" style="border-radius: 16px; background-color:  #c3b091 ;">   
+                  
+                  <label for="titolo" style="margin-bottom: 10px;">Cosa vuoi modificare
+                    <br> (Film; Year; Award; Nomination) :</label>
+                  <input type="text" id="campo_modifica" name="campo_modifica" class="form-control mb-3" style="border-radius: 16px; background-color:  #c3b091 ;">   
+
+                  <label for="titolo" style="margin-bottom: 10px;">Nuovo valore :</label>
+                  <input type="text" id="nuovo_valore_modifica" name="nuovo_valore_modifica" class="form-control mb-3" style="border-radius: 16px; background-color:  #c3b091 ;">   
+
+                  <span class="mod-message">{{ modMessage }}</span> <br>
+
+                  <input type="submit" value="Modifica" class="btn btn-outline-dark btn-lg btn-block" style="border-radius: 16px; background-color:  #c3b091 ;">
+
+                </form>
+              </div>
+            </div>
+              </div>
+            </div>
+
+    
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
