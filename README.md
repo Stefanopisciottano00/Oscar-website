@@ -16,3 +16,10 @@ Il sito presenta:
 - una sezione **Database** che presenta il database iniziale sul quale vengono effettuate le operazioni.
 - una sezione **Operazioni** attraverso la quale è possibile eliminare, aggiungere o modificare un film in base a vari parametri.
 - una sezione **Statistiche** nella quale è possibile visualizzare alcuni grafici statistici sui dati.
+
+
+**E' necessario che i film siano formattati in questo modo all'interno del database MongoDB :
+- Film : String
+- Year : int32
+- Award : int32
+- Nomination : int32**
