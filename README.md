@@ -18,8 +18,8 @@ Il sito presenta:
 - una sezione **Statistiche** nella quale è possibile visualizzare alcuni grafici statistici sui dati.
 
 
-**E' necessario che i film siano formattati in questo modo all'interno del database MongoDB :
+E' necessario che i film siano formattati in questo modo all'interno del database MongoDB :
 - Film : String
 - Year : int32
 - Award : int32
-- Nomination : int32**
+- Nomination : int32
