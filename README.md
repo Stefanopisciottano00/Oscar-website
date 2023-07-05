@@ -7,3 +7,4 @@ https://www.kaggle.com/datasets/pushpakhinglaspure/oscar-dataset
 
 Per quanto riguarda il database implementato in MongoDB è necessario implementare un DataBase chiamato Oscar con all'interno una collezione chiamata Film.
 
+![Immagine DataBase](./img/database.png)
